@@ -1,0 +1,94 @@
+.avatar {
+    display: flex;
+    margin-top: 1rem;
+}
+
+header, nav {
+    padding: 1rem;
+    background-color: var(--dark-bg);
+    color: white;
+}
+
+body.dark header, body.dark nav {
+    background-color: var(--light-bg);
+    color: black;
+}
+
+.avatar img {
+    width: 4rem;
+    height: 4rem;
+    border-radius: 2rem;
+    margin: auto;
+}
+
+.header-text {
+    flex: 3;
+    text-align: center;
+}
+
+nav {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #999;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav li {
+    margin: 0 auto;
+}
+
+nav button {
+    height: 100%;
+}
+
+nav span {
+    margin-top: 30%;
+    transform: rotate(0deg);
+    transition: transform 1s;
+}
+
+body.dark nav span {
+    transform: rotate(180deg);
+    transition: transform 1s;
+}
+
+nav a {
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: hsl(300, 60%, 50%);
+}
+
+@media screen and (min-width: 700px) {
+    .avatar {
+        width: 50%
+    }
+
+    nav ul {
+        padding: 0 25%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    nav ul {
+        flex-direction: column;
+    }
+    nav li {
+        display: block;
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid;
+    }
+
+    .avatar {
+        flex-direction: column;
+    }
+}

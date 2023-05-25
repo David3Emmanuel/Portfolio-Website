@@ -1,0 +1,32 @@
+.blog-post {
+    background-color: white;
+    flex: 1;
+    padding: 0.5rem;
+}
+
+body.dark .blog-post {
+    background-color: hsl(225, 88%, 10%);;
+    color: white;
+}
+
+.blog-post * {
+    margin: 0;
+}
+
+.blog-post p::first-letter {
+    font-size: 1.5rem;
+}
+
+.blog-post h1 {
+    color: var(--dark-header-bg);
+}
+
+body.dark .blog-post h1 {
+    color: var(--light-header-bg);
+}
+
+.blog-info {
+    margin: 1rem 5vw;
+    border-left: 0.5vw solid var(--dark-bg);
+    padding-left: 1vw;
+}

@@ -1,0 +1,10 @@
+.card {
+    padding: 1rem;
+    background-color: var(--light-bg);
+    border: #bbb 1px solid;
+    border-radius: 2rem;
+}
+
+body.dark .card {
+    background-color: var(--dark-bg);
+}

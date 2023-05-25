@@ -1,0 +1,90 @@
+.home {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.info {
+    max-width: 700px;
+}
+
+.contact-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+@media screen and (min-width: 980px) {
+    .contact-me {
+        flex-direction: row;
+        margin-top: 2rem;
+    }
+}
+
+aside {
+    margin: 0 auto;
+}
+
+.home p {
+    font-size: 1.1rem;
+}
+
+.home h3 {
+    font-size: 2rem;
+}
+
+.skills-slideshow {
+    width: 400px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.skill-list {
+    border: none;
+}
+
+.skill-list ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    height: min-content;
+}
+
+.skill-list li {
+    display: block;
+    padding: 1rem;
+    margin: 0 2rem;
+    border-radius: 0;
+    text-align: center;
+    border-bottom: 1px solid hsl(0, 0%, 50%);
+    background-color: white;
+    color: black;
+}
+
+body.dark .skill-list li {
+    background-color: black;
+    color: white;
+}
+
+.skill-list li.first, .skill-list li:first-child {
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+    margin-top: 0.5rem;
+}
+
+.skill-list li.last, .skill-list li:last-child {
+    border: none;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+@media screen and (min-width: 800px) {
+    .home {
+        flex-direction: row;
+    }
+
+    .info {
+        margin-right: 1rem;
+    }
+}

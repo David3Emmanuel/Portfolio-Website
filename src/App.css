@@ -1,0 +1,56 @@
+:root {
+    --hue: 174;
+    --light-bg: hsl(var(--hue), 90%, 60%);
+    --dark-bg: hsl(var(--hue), 72%, 47%);
+    --light-icon-bg: hsl(var(--hue), 40%, 80%);
+    --dark-icon-bg: hsl(var(--hue), 40%, 20%);
+    --light-header-bg: hsl(var(--hue), 100%, 65%);
+    --dark-header-bg: hsl(var(--hue), 100%, 35%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    background-color: hsl(225, 88%, 95%);
+}
+
+body.dark {
+    background-color: hsl(225, 88%, 5%);
+    color: white;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+button.clean {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0);
+    color: inherit;
+    cursor: pointer;
+}

@@ -1,0 +1,23 @@
+.blog {
+    margin-top: 2rem;
+}
+
+.post-preview {
+    margin: 1rem;
+}
+
+.post-link {
+    text-decoration: none;
+}
+
+.post-link .card {
+    border-radius: 1rem;
+}
+
+.post-link:hover .card {
+    box-shadow: 5px 5px 10px grey;
+}
+
+.post-link:hover h2 {
+    text-decoration: underline;
+}
