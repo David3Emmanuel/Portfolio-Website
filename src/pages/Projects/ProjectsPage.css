@@ -1,7 +1,8 @@
 .projects {
-    margin-top: 2rem;
+    margin-top: 1rem;
     display: flex;
     flex-wrap: wrap;
+    /* flex-direction: column; */
 }
 
 .project {
@@ -15,6 +16,7 @@
 
 .project-link {
     text-decoration: none;
+    margin: 1rem auto;
 }
 
 .project-link:hover .card {
@@ -26,6 +28,6 @@
 }
 
 .project-link .card {
-    width: 30vw;
-    height: 50vw;
+    width: 300px;
+    aspect-ratio: 3/5;
 }
