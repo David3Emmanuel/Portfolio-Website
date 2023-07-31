@@ -1,7 +1,8 @@
 :root {
-    --hue: 174;
-    --light-bg: hsl(var(--hue), 90%, 60%);
-    --dark-bg: hsl(var(--hue), 72%, 47%);
+    /* --hue: 174; */
+    --hue: 140;
+    --light-bg: hsl(var(--hue), 90%, 100%);
+    --dark-bg: hsl(var(--hue), 98%, 30%);
     --light-icon-bg: hsl(var(--hue), 40%, 80%);
     --dark-icon-bg: hsl(var(--hue), 40%, 20%);
     --light-header-bg: hsl(var(--hue), 100%, 65%);
@@ -53,4 +54,9 @@ button.clean {
     background-color: rgba(0, 0, 0, 0);
     color: inherit;
     cursor: pointer;
+}
+
+h2.empty {
+    margin: 5rem auto;
+    text-align: center;
 }

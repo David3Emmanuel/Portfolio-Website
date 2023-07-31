@@ -3,6 +3,6 @@ import "./ErrorPage.css";
 
 export default function ErrorPage(props) {
     return <Root>
-        <p>Error</p>
+        <h2 className="empty">Sorry... something went wrong.</h2>
     </Root>
 }

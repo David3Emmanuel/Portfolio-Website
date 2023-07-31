@@ -4,7 +4,8 @@
 
 .expandable {
     display: inline-flex;
-    background-color: var(--light-icon-bg);
+    background-color: var(--dark-icon-bg);
+    color: white;
     border-radius: 2rem;
     width: 100%;
     max-width: 400px;
@@ -14,8 +15,8 @@
 }
 
 body.dark .expandable {
-    background-color: var(--dark-icon-bg);
-    color: white;
+    background-color: var(--light-icon-bg);
+    color: black;
 }
 
 .expandable .icon {

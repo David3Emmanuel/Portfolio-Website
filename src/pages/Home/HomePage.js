@@ -14,7 +14,7 @@ export default function HomePage() {
             <div className="contact-me">
                 <ExpandableLink to="mailto: david3emmanuel@gmail.com" icon="/gmail.ico" alt="Email" />
                 <ExpandableLink to="https://github.com/David3Emmanuel" icon="/github.ico" alt="Github" />
-                <ExpandableLink to="https://wa.me/2347012117811" description="+234 701 211 7811" icon="/whatsapp.ico" alt="Whatsapp" />
+                <ExpandableLink to="https://wa.me/2347012117811" description="+234 7012117811" icon="/whatsapp.ico" alt="Whatsapp" />
                 <ExpandableLink to="https://linkedin.com/David3Emmanuel" icon="/linkedin.ico" alt="Linkedin" />
                 <ExpandableLink to="https://twitter.com/David3Emmanuel" icon="/twitter.ico" alt="Twitter" />
             </div>

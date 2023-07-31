@@ -5,11 +5,11 @@ import Card from "./Card";
 import "./Header.css";
 
 export default function Header() {
-    const [theme, setTheme] = useState(true);
+    // const [theme, setTheme] = useState(false);
 
-    useEffect(() => {
-        document.body.className = theme ? "light" : "dark"
-    }, [theme])
+    // useEffect(() => {
+    //     document.body.className = theme ? "light" : "dark"
+    // }, [theme])
 
     return <>
         <header>
@@ -24,7 +24,7 @@ export default function Header() {
                 <li><Link to='/projects' nav><h3>PROJECTS</h3></Link></li>
                 <li><Link to='/blog' nav><h3>BLOG</h3></Link></li>
                 <li><Link to='/login'><h3>LOG IN</h3></Link></li>
-                <li><button className="clean" onClick={() => setTheme(prev => !prev)}><span className="material-icons">brightness_4</span></button></li>
+                {/* <li><button className="clean" onClick={() => setTheme(prev => !prev)}><span className="material-icons">brightness_4</span></button></li> */}
             </ul>
         </nav>
     </>

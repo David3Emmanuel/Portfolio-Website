@@ -6,14 +6,14 @@
 header,
 nav {
     padding: 1rem;
-    background-color: var(--dark-bg);
-    color: white;
+    background-color: var(--light-bg);
+    color: black;
 }
 
 body.dark header,
 body.dark nav {
-    background-color: var(--light-bg);
-    color: black;
+    background-color: var(--dark-bg);
+    color: white;
 }
 
 .avatar img {
@@ -26,6 +26,7 @@ body.dark nav {
 .header-text {
     flex: 3;
     text-align: center;
+    color: black;
 }
 
 nav {

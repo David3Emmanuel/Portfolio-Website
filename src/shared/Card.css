@@ -1,10 +1,10 @@
 .card {
     padding: 1rem;
-    background-color: var(--light-bg);
+    background-color: var(--dark-bg);
     border: #bbb 1px solid;
     border-radius: 2rem;
 }
 
 body.dark .card {
-    background-color: var(--dark-bg);
+    background-color: var(--light-bg);
 }

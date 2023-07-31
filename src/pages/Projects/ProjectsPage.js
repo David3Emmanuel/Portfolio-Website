@@ -3,22 +3,10 @@ import Card from "../../shared/Card";
 import "./ProjectsPage.css";
 
 export default function ProjectsPage() {
-    const DUMMY_PROJECTS = [
-        {
-            "name": "School Arena",
-            "description": "How intelligent are you? Climb up the ranks by challenging scholars from all around the world",
-            "image": "/twitter.ico",
-            "id": "school-arena"
-        },
-        {
-            "name": "Chess All-In-One",
-            "description": "Want to go deeper into chess? This project is a complete compilation of all tools you could possibly need for chess analysis, practice, and so much more!",
-            "image": "/github.ico",
-            "id": "school-arena"
-        }
-    ]
+    const DUMMY_PROJECTS = []
 
     return <div className="projects">
+        {DUMMY_PROJECTS.length === 0 && <h2 className="empty">No projects yet...</h2>}
         {DUMMY_PROJECTS.map((project, i) => {
             return <Project key={i} {...project} />
         })}
