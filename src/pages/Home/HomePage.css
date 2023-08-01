@@ -36,9 +36,14 @@ aside {
 }
 
 .skills-slideshow {
-    width: 400px;
+    width: 90vw;
     height: 100vh;
     margin: 0 auto;
+}
+@media screen and (min-width: 450px) {
+    .skills-slideshow {
+        width: 400px;
+    }
 }
 
 .skill-card {
