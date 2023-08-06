@@ -4,19 +4,14 @@
 
 .expandable {
     display: inline-flex;
-    background-color: var(--dark-icon-bg);
-    color: white;
+    background-color: var(--light-icon-bg);
+    color: black;
     border-radius: 2rem;
     width: 100%;
     max-width: 400px;
     flex-direction: row;
     padding: 0.75rem 1rem;
     margin: 0.25rem auto;
-}
-
-body.dark .expandable {
-    background-color: var(--light-icon-bg);
-    color: black;
 }
 
 .expandable .icon {

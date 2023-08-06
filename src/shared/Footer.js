@@ -5,9 +5,10 @@ import "./Footer.css";
 export default function Footer() {
     return <footer>
         <section>
-            <h3><Link to="/">Home Page</Link></h3>
-            <h3><Link to="/projects">Projects</Link></h3>
-            <h3><Link to="/blog">Blog Posts</Link></h3>
+            <h3>SITEMAP</h3>
+            <p><Link to="/">Home Page</Link></p>
+            <p><Link to="/projects">Projects</Link></p>
+            <p><Link to="/blog">Blog Posts</Link></p>
         </section>
         <section>
             <h3>Contact Me:</h3>

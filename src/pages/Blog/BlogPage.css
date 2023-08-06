@@ -1,5 +1,6 @@
 .blog {
     margin-top: 2rem;
+    min-height: 75vh;
 }
 
 .post-preview {
@@ -12,6 +13,7 @@
 
 .post-link .card {
     border-radius: 1rem;
+    color: black;
 }
 
 .post-link:hover .card {

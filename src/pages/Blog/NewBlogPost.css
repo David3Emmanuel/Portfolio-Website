@@ -1,0 +1,23 @@
+.new-blogpost .post-input {
+    display: flex;
+    margin: 1rem;
+    justify-content: space-between;
+    width: 30%;
+    min-width: 300px;
+}
+
+.new-blogpost textarea {
+    width: 100%;
+    overflow-y: hidden;
+    min-height: 10rem;
+}
+
+.new-blogpost button {
+    background-color: var(--dark-header-bg);
+    padding: 0.5rem;
+    display: block;
+    width: 7.5rem;
+    border-radius: 1rem;
+    margin: 1rem auto;
+    color: white;
+}

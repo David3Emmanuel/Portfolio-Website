@@ -1,12 +1,9 @@
 .blog-post {
-    background-color: white;
     flex: 1;
     padding: 0.5rem;
-}
-
-body.dark .blog-post {
-    background-color: hsl(225, 88%, 10%);;
-    color: white;
+    background-color: hsl(225, 0%, 90%);;
+    color: black;
+    min-height: 75vh;
 }
 
 .blog-post * {
@@ -19,10 +16,6 @@ body.dark .blog-post {
 
 .blog-post h1 {
     color: var(--dark-header-bg);
-}
-
-body.dark .blog-post h1 {
-    color: var(--light-header-bg);
 }
 
 .blog-info {

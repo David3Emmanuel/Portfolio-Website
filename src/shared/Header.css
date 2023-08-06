@@ -6,12 +6,6 @@
 header,
 nav {
     padding: 1rem;
-    background-color: var(--light-bg);
-    color: black;
-}
-
-body.dark header,
-body.dark nav {
     background-color: var(--dark-bg);
     color: white;
 }
@@ -50,17 +44,6 @@ nav button {
     height: 100%;
 }
 
-nav span {
-    margin-top: 30%;
-    transform: rotate(0deg);
-    transition: transform 1s;
-}
-
-body.dark nav span {
-    transform: rotate(180deg);
-    transition: transform 1s;
-}
-
 nav a {
     text-transform: uppercase;
     text-decoration: none;
@@ -69,10 +52,6 @@ nav a {
 nav a:hover {
     color: hsl(300, 60%, 50%);
 }
-
-/* nav a.active {
-    color: hsl(300, 60%, 50%);
-} */
 
 nav a.active {
     :first-child::before {
