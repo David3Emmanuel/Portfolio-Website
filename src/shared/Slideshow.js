@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./Slideshow.css";
 
-const SLIDE_DELAY = 5; //Number of seconds
+const SLIDE_DELAY = 10; //Number of seconds
 
 export default function Slideshow({ className, children }) {
     const [activeCard, setActiveCard] = useState(0);
@@ -21,6 +21,7 @@ export default function Slideshow({ className, children }) {
             })}
         </div>
         <div className="slide-container">
+            <button className="navigate-button previous material-icons" onClick={() => setActiveCard(prev => (prev+children.length-1)%children.length)}>navigate_before</button>
             {children.map((child, i) => {
                 let positionClass;
                 if (activeCard === i) {
@@ -34,6 +35,7 @@ export default function Slideshow({ className, children }) {
                 }
                 return <div key={i} className={`slide ${positionClass}`}>{child}</div>
             })}
+            <button className="navigate-button next material-icons" onClick={() => setActiveCard(prev => (prev+1)%children.length)}>navigate_next</button>
         </div>
     </div>
 }
