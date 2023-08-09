@@ -9,7 +9,7 @@ export default function HomePage() {
     return <div className="home">
         <div className="info">
             <h3>Hi, I'm David!</h3>
-            <p>I am a 16-year-old web developer from Lagos, Nigeria. I began my development journey as a hobbyist but I'm now looking forward to working with clients who want to build web apps.</p>
+            <p>I am a young web developer from Lagos, Nigeria. I began my development journey as a hobbyist but I'm now looking forward to working with clients who want to build web apps.</p>
             <p>Reach out to me on my social media handles and check out my latest projects <Link to="/projects">here</Link>.</p>
             <div className="contact-me">
                 <ExpandableLink to="mailto: david3emmanuel@gmail.com" icon="/gmail.ico" alt="Email" />

@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./App.css";
 import Root from "./Root";
 import { HomePage, ErrorPage, BlogPage, BlogPost, ProjectsPage, NewBlogPost } from "./pages/pages";
+import SignIn from "./SIgnIn/SignIn";
 
 export default function App() {
   const router = createBrowserRouter([
@@ -15,7 +16,7 @@ export default function App() {
         { path: "/blog", element: <BlogPage /> },
         { path: "/blog/create", element: <NewBlogPost /> },
         { path: "/blog/:id", element: <BlogPost /> },
-        { path: "/login", element: null },
+        { path: "/login", element: <SignIn /> },
         { path: "/forum", element: null },
         { path: "/:project", element: null }
       ]

@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { onValue, ref } from "firebase/database";
 import { db } from "../../utils/firebase";
 import Link from "../../UI/Link";
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 
 export default function BlogPost() {
     const id = useParams().id;
@@ -33,7 +34,7 @@ export default function BlogPost() {
                 <i>By {post.author}</i>
                 <blockquote>{post.description}</blockquote>
             </div>
-            <p>{post.content}</p>
+            <ReactMarkdown>{post.content}</ReactMarkdown>
         </>}
     </div>
 }

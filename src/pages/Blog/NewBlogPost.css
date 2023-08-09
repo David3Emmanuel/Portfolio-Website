@@ -1,23 +1,27 @@
-.new-blogpost .post-input {
+.content-container {
     display: flex;
-    margin: 1rem;
-    justify-content: space-between;
-    width: 30%;
-    min-width: 300px;
 }
 
-.new-blogpost textarea {
+.content-container div {
+    flex: 1;
+    margin: 2.5px;
+}
+
+.content {
+    color: black;
+    background-color: hsl(225, 0%, 90%);
+    border: 1px solid black;
     width: 100%;
     overflow-y: hidden;
     min-height: 10rem;
+    height: 15rem;
+    padding: 5px;
 }
 
-.new-blogpost button {
-    background-color: var(--dark-header-bg);
-    padding: 0.5rem;
-    display: block;
-    width: 7.5rem;
-    border-radius: 1rem;
-    margin: 1rem auto;
-    color: white;
+textarea.content {
+    background-color: white;
+}
+
+.preview li {
+    margin-left: 20px;
 }
