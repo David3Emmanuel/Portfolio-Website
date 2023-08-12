@@ -48,7 +48,7 @@ export default function BlogPost() {
             <Link to="/blog">See all posts</Link>
         </>}
         {post !== null && <div className="blog-content">
-            <h1>{post.title}</h1>
+            <h1 className="blog-title">{post.title}</h1>
             <div className="blog-info">
                 <i>{new Date(post.date).toDateString()} by {post.author}</i>
                 <p className="description">{post.description}</p>

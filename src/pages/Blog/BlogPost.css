@@ -24,6 +24,10 @@
 
 .blog-post h1, .blog-post h2, .blog-post h3 {
     color: var(--dark-header-bg);
+    margin-top: 1rem;
+}
+.blog-title {
+    /* margin: 0; */
 }
 
 .blog-post>p {
