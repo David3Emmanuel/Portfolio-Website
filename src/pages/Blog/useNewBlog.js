@@ -4,7 +4,7 @@ import { auth, db } from "../../utils/firebase";
 import { useNavigate } from "react-router-dom";
 import { onAuthStateChanged } from "firebase/auth";
 
-export default function useNewBlog(originalPost) {
+export default function useNewBlog() {
     const navigate = useNavigate();
     const [username, setUsername] = useState(null);
 
@@ -23,9 +23,9 @@ export default function useNewBlog(originalPost) {
     function createPost(e) {
         e.preventDefault();
         console.log(post)
-        const id = post.title.toLowerCase().replace(/\s/g, '-');
+        const id = post.title.toLowerCase().replace(/\s/, '-');
         const newPostRef = ref(db, "posts/" + id);
-        set(newPostRef, {...post, id: id, author: username, date: Date.now()});
+        set(newPostRef, {...post, id: id, author: username});
         navigate("/blog/" + id);
     }
 
@@ -35,12 +35,11 @@ export default function useNewBlog(originalPost) {
         if (action.type === "CONTENT") return { ...state, content: action.value };
         return state;
     }
-    const [post, dispatch] = useReducer(reducer, originalPost || {
+    const [post, dispatch] = useReducer(reducer, {
         title: "",
         id: "",
         author: "",
         description: "",
-        date: new Date(),
         content: "**bold**  \n*italic*  \n- Bullet 1  \n- Bullet 2  \n\n[Link](https://www.a.com)  \n![Image](/favicon.ico)" })
 
     function changePostContent(e) {
@@ -49,7 +48,7 @@ export default function useNewBlog(originalPost) {
         for (var i=0; i<contents.length; i++) {
             contents[i].style.height = height + "px"; 
         };
-        if (e) dispatch({ type: "CONTENT", value: e.target.value })
+        dispatch({ type: "CONTENT", value: e.target.value })
     }
 
     return { post, dispatch, changePostContent, createPost };

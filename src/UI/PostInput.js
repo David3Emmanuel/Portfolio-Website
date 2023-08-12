@@ -1,7 +1,7 @@
 import "./PostInput.css";
 
-export default function PostInput({ name, label, value, dispatch, password, disabled, className }) {
-    return <div className={className ? "post-input " + className : "post-input"}>
+export default function PostInput({ name, label, value, dispatch, password, disabled }) {
+    return <div className="post-input">
         <p>{label}</p>
         <input
             type={password ? "password" : "text"}
