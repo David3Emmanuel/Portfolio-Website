@@ -1,10 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import * as ReactDOMClient from 'react-dom/client';
 import 'material-icons/iconfont/material-icons.css';
 
 import App from './App';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const container = document.getElementById('root');
+const root = container.hasChildNodes() ? ReactDOMClient.hydrateRoot(container) : ReactDOMClient.createRoot(container);
+
 root.render(
   <React.StrictMode>
     <App />
