@@ -19,7 +19,6 @@ export default function BlogPage() {
         })
     }, []);
 
-    console.log(posts);
     return <div className="blog">
         <Link to="/blog/create">New post...</Link>
         {loading && <h2 className="empty">Loading...</h2>}

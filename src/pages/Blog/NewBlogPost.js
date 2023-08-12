@@ -2,9 +2,14 @@ import "./NewBlogPost.css";
 import PostInput from "../../UI/PostInput";
 import useNewBlog from "./useNewBlog";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
+import { useEffect } from "react";
 
-export default function NewBlogPost() {
-    const { post, dispatch, changePostContent, createPost } = useNewBlog();
+export default function NewBlogPost({originalPost}) {
+    const { post, dispatch, changePostContent, createPost } = useNewBlog(originalPost);
+
+    useEffect(() => {
+        changePostContent();
+    }, [changePostContent])
 
     return <form className="new-blogpost" onSubmit={createPost}>
         <PostInput name="TITLE" label="Title:" value={post.title} dispatch={dispatch} />
