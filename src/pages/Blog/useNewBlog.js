@@ -25,7 +25,7 @@ export default function useNewBlog(originalPost) {
         console.log(post)
         const id = post.title.toLowerCase().replace(/\s/g, '-');
         const newPostRef = ref(db, "posts/" + id);
-        set(newPostRef, {...post, id: id, author: username, date: Date.now()});
+        set(newPostRef, { ...post, id: id, author: username, date: originalPost.date || Date.now() });
         navigate("/blog/" + id);
     }
 
@@ -37,17 +37,15 @@ export default function useNewBlog(originalPost) {
     }
     const [post, dispatch] = useReducer(reducer, originalPost || {
         title: "",
-        id: "",
-        author: "",
         description: "",
-        date: new Date(),
-        content: "**bold**  \n*italic*  \n- Bullet 1  \n- Bullet 2  \n\n[Link](https://www.a.com)  \n![Image](/favicon.ico)" })
+        content: "**bold**  \n*italic*  \n- Bullet 1  \n- Bullet 2  \n\n[Link](https://www.a.com)  \n![Image](/favicon.ico)"
+    })
 
     function changePostContent(e) {
         const height = document.getElementsByClassName("preview")[0].scrollHeight;
         const contents = document.getElementsByClassName("content");
-        for (var i=0; i<contents.length; i++) {
-            contents[i].style.height = height + "px"; 
+        for (var i = 0; i < contents.length; i++) {
+            contents[i].style.height = height + "px";
         };
         if (e) dispatch({ type: "CONTENT", value: e.target.value })
     }

@@ -26,9 +26,6 @@
     color: var(--dark-header-bg);
     margin-top: 1rem;
 }
-.blog-title {
-    /* margin: 0; */
-}
 
 .blog-post>p {
     margin: 1rem 0;
