@@ -28,4 +28,9 @@ function getPostsByUser(req, res, next) {
     res.json(posts);
 }
 
-module.exports = { getAllPosts, getPostById, getPostsByUser }
+function createPost(req, res, next) {
+    res.status(404).json({message: "Not implemented"});
+    //res.status(201);
+}
+
+module.exports = { getAllPosts, getPostById, getPostsByUser, createPost }
