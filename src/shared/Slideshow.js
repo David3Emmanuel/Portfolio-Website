@@ -12,16 +12,47 @@ export default function Slideshow({ className, children }) {
         return () => clearInterval(interval)
     }, [activeCard, children])
 
+    const [touchStart, setTouchStart] = useState(null);
+    const [touchEnd, setTouchEnd] = useState(null);
+
+    function prev() {
+        setActiveCard(prev => (prev+children.length-1)%children.length)
+    }
+    function next() {
+        setActiveCard(prev => (prev+1)%children.length)
+    }
+
+    function onTouchStart(e) {
+        setTouchStart(e.targetTouches[0].clientX);
+        setTouchEnd(null);
+    }
+
+    function onTouchMove(e) {
+        setTouchEnd(e.targetTouches[0].clientX)
+    }
+
+    function onTouchEnd() {
+        if (touchStart && touchEnd) {
+            const distance = touchEnd - touchStart;
+            const MIN_DISTANCE = 50;
+            if (distance < -MIN_DISTANCE) {
+                next();
+            } else if (distance > MIN_DISTANCE) {
+                prev();
+            }
+        }
+    }
+
     let formattedClass = "slideshow"
     if (className) formattedClass += " " + className
-    return <div className={formattedClass}>
+    return <div className={formattedClass} onTouchStart={onTouchStart} onTouchMove={onTouchMove} onTouchEnd={onTouchEnd}>
         <div className="counter center">
             {children.map((child, i) => {
                 return <Circle key={i} index={i} isActive={activeCard === i} setActive={setActiveCard} />
             })}
         </div>
         <div className="slide-container">
-            <button className="navigate-button previous material-icons" onClick={() => setActiveCard(prev => (prev+children.length-1)%children.length)}>navigate_before</button>
+            <button className="navigate-button previous material-icons" onClick={prev}>navigate_before</button>
             {children.map((child, i) => {
                 let positionClass;
                 if (activeCard === i) {
@@ -35,7 +66,7 @@ export default function Slideshow({ className, children }) {
                 }
                 return <div key={i} className={`slide ${positionClass}`}>{child}</div>
             })}
-            <button className="navigate-button next material-icons" onClick={() => setActiveCard(prev => (prev+1)%children.length)}>navigate_next</button>
+            <button className="navigate-button next material-icons" onClick={next}>navigate_next</button>
         </div>
     </div>
 }

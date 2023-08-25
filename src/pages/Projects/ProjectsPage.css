@@ -7,6 +7,11 @@
 
 .project {
     margin: 0.5rem;
+    color: black;
+}
+
+.project h2 {
+    color: var(--dark-bg);
 }
 
 .project img {

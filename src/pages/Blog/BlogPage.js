@@ -24,16 +24,18 @@ export default function BlogPage() {
         {loading && <h2 className="empty">Loading...</h2>}
         {Object.entries(posts).length > 0 && <h1>Recent Posts</h1>}
         {!loading && Object.entries(posts).length === 0 && <h2 className="empty">No blog posts yet...</h2>}
-        {Object.entries(posts).map(([id, post]) => {
+        {Object.entries(posts)
+        .sort(([id1, post1], [id2, post2]) => post2.date - post1.date)
+        .map(([id, post]) => {
             return <PostPreview key={id} {...post} />
         })}
     </div>
 }
 
-function PostPreview({ title, description, author, id }) {
+function PostPreview({ title, description, author, id, date }) {
     return <Link className="post-link" to={`/blog/${id}`}><Card className="post-preview">
         <h2>{title}</h2>
-        <i>{author}</i>
+        <i>{new Date(date).toDateString()} by {author}</i>
         <p>{description}</p>
     </Card></Link>
 }

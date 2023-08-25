@@ -19,8 +19,7 @@ export default function App() {
         { path: "/blog/:id/edit", element: <EditBlogPost /> },
         { path: "/blog/:id", element: <BlogPost /> },
         { path: "/login", element: <SignIn /> },
-        { path: "/forum", element: null },
-        { path: "/:project", element: null }
+        { path: "/forum", element: null }
       ]
     }
   ])
