@@ -25,7 +25,7 @@ export default function useNewBlog(originalPost) {
         console.log(post)
         const id = post.title.toLowerCase().replace(/\s/g, '-');
         const newPostRef = ref(db, "posts/" + id);
-        set(newPostRef, { ...post, id: id, author: username, date: originalPost.date || Date.now() });
+        set(newPostRef, { ...post, id: id, author: username, date: (originalPost && originalPost.date) || Date.now() });
         navigate("/blog/" + id);
     }
 
