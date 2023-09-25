@@ -34,5 +34,10 @@
 
 .project-link .card {
     width: 300px;
-    aspect-ratio: 3/5;
+}
+
+@media screen and (min-width: 400px) {
+    .project-link .card {
+        aspect-ratio: 3/5;
+    }
 }

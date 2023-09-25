@@ -8,6 +8,12 @@ const PROJECTS = [
         description: "Multiplayer tournament for high school students.\nLearn and practice by competing with others from around the world in all high school subjects.",
         image: "/alterok-lab1.png",
         url: "https://schoolarena.vercel.app"
+    },
+    {
+        name: "TicTacToe Demo",
+        description: "Made with Processing for Java",
+        image: "/TicTacToe.jpeg",
+        url: "https://github.com/David3Emmanuel/tictactoe"
     }
 ]
 
@@ -16,11 +22,11 @@ export default function ProjectsPage() {
         {PROJECTS.length === 0 && <h2 className="empty">No projects yet...</h2>}
         {PROJECTS.length === 1 && <h3 className="center-text">One project</h3>}
         {PROJECTS.length > 1 && <h3 className="center-text">{PROJECTS.length} projects</h3>}
-	<div className="projects">
+        <div className="projects">
             {PROJECTS.map((project, i) => {
                 return <Project key={i} {...project} />
             })}
-	</div>
+        </div>
     </div>
 }
 
