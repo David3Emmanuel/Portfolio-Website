@@ -4,19 +4,25 @@ import Card from "./Card";
 
 import "./Header.css";
 import { auth, db } from "../utils/firebase";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { onValue, ref } from "firebase/database";
 
 export default function Header() {
     const [username, setUsername] = useState(null);
-    onAuthStateChanged(auth, user => {
-        if (user) {
-            const userRef = ref(db, "users/"+user.uid);
-            onValue(userRef, snapshot => {
-                setUsername(snapshot.val().username);
-            })
-        }
-    })
+    useEffect(() => {
+        onAuthStateChanged(auth, user => {
+            if (user) {
+                const userRef = ref(db, "users/" + user.uid);
+                onValue(userRef, snapshot => {
+                    setUsername(snapshot.val().username);
+                })
+            }
+        });
+    }, []);
+
+    const [showMenu, setShowMenu] = useState(false);
+    console.log("header");
+
     return <>
         <header>
             <Link to="/"><Card className="center avatar">
@@ -24,8 +30,9 @@ export default function Header() {
                 <h2 className="header-text">David Emmanuel</h2>
             </Card></Link>
         </header>
-        <nav>
-            <ul>
+        <nav className={showMenu ? "" : "hidden-nav"}>
+            <li className="menu-btn"><span className="material-icons" onClick={() => setShowMenu(prev => !prev)}>menu</span></li>
+            <ul onClick={() => setShowMenu(false)}>
                 <li><Link to='/' nav><h3>HOME</h3></Link></li>
                 <li><Link to='/projects' nav><h3>PROJECTS</h3></Link></li>
                 <li><Link to='/blog' nav><h3>BLOG</h3></Link></li>

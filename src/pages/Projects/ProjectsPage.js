@@ -10,11 +10,17 @@ const PROJECTS = [
         url: "https://schoolarena.vercel.app"
     },
     {
+        name: "Hairs by Solomon",
+        description: "I made an e-commerce website for a friend of mine complete with database, authentication, and storage.",
+        image: "https://hairsbysolomon.vercel.app/logo-colored.jpeg",
+        url: "https://hairsbysolomon.vercel.app"
+    },
+    {
         name: "TicTacToe Demo",
         description: "Made with Processing for Java",
         image: "/TicTacToe.jpeg",
         url: "https://github.com/David3Emmanuel/tictactoe"
-    }
+    },
 ]
 
 export default function ProjectsPage() {

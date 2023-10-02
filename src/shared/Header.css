@@ -32,12 +32,25 @@ nav {
 }
 
 nav ul {
+    position: static;
+    width: 100%;
+    left: 0;
+    right: 0;
+    background-color: inherit;
     display: flex;
     list-style: none;
+    transform-origin: top center;
+    transform: scaleY(1);
+    transition: transform 0.2s;
+}
+.hidden-nav ul {
+    transform: scaleY(0);
+    transition: transform 0.2s;
 }
 
 nav li {
     margin: 0 auto;
+    background-color: inherit;
 }
 
 nav button {
@@ -57,6 +70,10 @@ li.username {
 li.username a {
     text-transform: none;
 }
+li.username h3 {
+    margin: 0;
+    padding: 0.5rem;
+}
 
 nav a:hover {
     color: hsl(300, 60%, 50%);
@@ -71,6 +88,15 @@ nav a.active {
     }
 }
 
+.menu-btn {
+    transform: translate(0);
+    display: none;
+    padding: 0.5rem;
+}
+.menu-btn span {
+    font-size: 24px;
+}
+
 @media screen and (min-width: 800px) {
     .avatar {
         width: 50%
@@ -82,7 +108,15 @@ nav a.active {
 }
 
 @media screen and (max-width: 400px) {
+    nav {
+        padding: 0;
+    }
+    .menu-btn {
+        display: block;
+    }
+
     nav ul {
+        position: absolute;
         flex-direction: column;
     }
 
