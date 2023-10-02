@@ -35,6 +35,25 @@
     width: 100%;
 }
 
+.blog-post code {
+    background-color: hsl(225, 88%, 5%);
+    color: white;
+    padding: 0.25rem;
+    font-size: 0.8rem;
+}
+
+.blog-post pre {
+    background-color: hsl(225, 88%, 5%);
+    color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin: 1rem 0;
+}
+
+.blog-post pre code {
+    padding: 0;
+}
+
 .blog-info {
     margin: 1rem;
     border-left: 0.5vw solid var(--dark-bg);
