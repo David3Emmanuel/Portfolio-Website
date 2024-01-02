@@ -5,7 +5,7 @@ import "./ProjectsPage.css";
 const PROJECTS = [
     {
         name: "School Arena",
-        description: "Multiplayer tournament for high school students.\nLearn and practice by competing with others from around the world in all high school subjects.",
+        description: "Multiplayer tournament for high school students (Work in Progress).\nLearn and practice by competing with others from around the world in all high school subjects.",
         image: "/alterok-lab1.png",
         url: "https://schoolarena.vercel.app"
     },
