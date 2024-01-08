@@ -4,12 +4,6 @@ import "./ProjectsPage.css";
 
 const PROJECTS = [
     {
-        name: "School Arena",
-        description: "Multiplayer tournament for high school students (Work in Progress).\nLearn and practice by competing with others from around the world in all high school subjects.",
-        image: "/alterok-lab1.png",
-        url: "https://schoolarena.vercel.app"
-    },
-    {
         name: "Hairs by Solomon",
         description: "I made an e-commerce website for a friend of mine complete with database, authentication, and storage.",
         image: "https://hairsbysolomon.vercel.app/logo-colored.jpeg",
@@ -21,6 +15,12 @@ const PROJECTS = [
         image: "/TicTacToe.jpeg",
         url: "https://github.com/David3Emmanuel/tictactoe"
     },
+    {
+        name: "School Arena",
+        description: "Multiplayer tournament for high school students (Work in Progress).\nLearn and practice by competing with others from around the world in all high school subjects.",
+        image: "/alterok-lab1.png",
+        url: "https://schoolarena.vercel.app"
+    }
 ]
 
 export default function ProjectsPage() {
